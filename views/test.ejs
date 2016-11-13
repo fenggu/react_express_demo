@@ -1,6 +1,4 @@
-
-
-				 <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -100,11 +98,11 @@
 				  usernum=JSON.parse('<%- JSON.stringify(usernum)%>');
 					$("#usernum").html(usernum) 
 					$("#title").html(datas.title) 
-					max = datas.content.length
+					max = datas.question.length
 					console.log(max)
 					$("#num").html(max) 
-					trueans = datas.trueans;
-					pushdata(datas.content[0], datas.answer[0][0], datas.answer[0][1], datas.answer[0][2], datas.answer[0][3]);
+					trueans = datas.question;
+					pushdata(datas.question[0].content, datas.question[0].answer[0], datas.question[0].answer[1], datas.question[0].answer[2], datas.question[0].answer[3]);
 		}
 		$("#qus_answer p").map(function() {
 			$(this).click(function() {
@@ -139,7 +137,7 @@
 					$(".ty_btn").hide()
 				}
 				num = num + 1;
-				pushdata(datas.content[num], datas.answer[num][0], datas.answer[num][1], datas.answer[num][2], datas.answer[num][3])
+				pushdata(datas.question[num].content, datas.question[num].answer[0],  datas.question[num].answer[1],  datas.question[num].answer[2],  datas.question[num].answer[3])
 				var _process = 1 - num / max;
 				_process = _process.toPercent();
 				$("#process").css("width", _process)
@@ -179,13 +177,13 @@
 				$("#before").hide()
 			}
 			$(".ty_btn").hide();
-			pushdata(datas.content[num], datas.answer[num][0], datas.answer[num][1], datas.answer[num][2], datas.answer[num][3])
+			pushdata( datas.question[num].content, datas.question[num].answer[0],  datas.question[num].answer[1],  datas.question[num].answer[2],  datas.question[num].answer[3])
 
 		})
 		function getdetail(){
 			for(var i=0;i<max;i++){
 				console.log()
-				var dd=trueans[i][myans[i]];
+				var dd=trueans[i].detail[myans[i]];
 				dd=parseInt(dd)
 				detail=detail+dd
 			}

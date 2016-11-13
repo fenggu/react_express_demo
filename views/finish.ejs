@@ -44,8 +44,7 @@
 		<p class="ty_p">
 			
 		</p>
-		<div class="ty_btn"> <span id="To">邀请好友测试</span><span id="share" style="margin-left: 2rem">分享测试结果</span></div>
-			<img src="img/tj.png" style="margin-left: 5%;margin-top: 2rem;width: 1.4rem;height: auto"> <span style="font-size: 1.5rem">为您推荐</span> <br>
+		<div class="ty_btn"> <span id="To">邀请好友测试</span><span id="share" style="margin-left: 2rem">分享测试结果</span></div> 
 		<div class="tuijian" uid="" style="display: none;">
 			<div class="headtitle">
 				<img id="header" src=""> 
@@ -254,21 +253,6 @@
 			share(str,linkPic,title,link) 
 		} 
 
-            $.ajax({
-                    url: 'getlistener',
-                    type: "get",
-                    dataType: "json", 
-                    success: function(data) {
-                        console.log(data)
-                        $(".tuijian").show()
-						$('#header').attr({
-							"src" : "http://avatar.51songguo.com/user/"+(data.data.uid%255)+"/"+data.data.uid+"/size_70.png"
-						})
-						$(".tuijian").attr("uid",data.data.uid)
-                        $(".msg").html(data.data.introduce)
-                        $(".name h3").html(data.data.username) 
-                        $(".min cite").html(data.data.totalTime)
-                    }
-            })
+           
 	</script>
 </html>

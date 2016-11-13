@@ -19,11 +19,12 @@ import {changepid} from './actions.js'
 // Reducer 
 var  initState={
   main:[{title:"",pid:""},{title:"",pid:""}] ,
-  test:{time:"",
+  test:{time:"", 
+  pid:"",
   question:[
   {content:"",
   answer:{A:"",B:"",C:"",D:""},
-  detail:{a:"",b:"",c:"",d:""}
+  detail:{A:"",B:"",C:"",D:""}
 }
 ],
 ansdetext:[""],ansdeqj:[["",""]],num:"",pid:"",title:""}
@@ -52,7 +53,6 @@ function counter(state, action) {
   nextstate.main=action.list 
   return nextstate
   case  changepid:
-
     var nextstate=Object.assign({},state)
     var _state=Object.assign({},state.test)
     _state.pid=action.text
@@ -62,14 +62,15 @@ function counter(state, action) {
     var nextstate=Object.assign({},state)
     var _state=Object.assign({},state.test)
     _state.title=action.text;
-    nextstate.test=_state
+    nextstate.test=_state 
   return  nextstate
   case addtest: //添加数据方法 以及编辑方法
   var test = Object.assign({}, state.test)  
-      if(test.title=""||test.pid==""){
+      if(test.title==""||test.pid==""){
         alert("标题或者编号不得为空！")
         return state
       }
+      console.log(test)
       fetch('addtest', {  
         method: 'post',
         headers: {
@@ -86,6 +87,8 @@ function counter(state, action) {
               ansdeqj:test.ansdeqj
         })
      }).then(function(response) { 
+        alert("添加成功")
+        window.location.href="admin.html"
         return response.json();
     }).catch(function(err) {
         // 捕获错误

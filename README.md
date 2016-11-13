@@ -15,6 +15,6 @@
 	data:用户资料备用
 	dist:webpack 产出的静态文件
 	src：react 生产环境代码
-	static:用户答题页面 代码
+	static:正式产出代码
 	views:用户答题页面ejs模板
 

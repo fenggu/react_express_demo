@@ -5,7 +5,7 @@ var ejs = require('ejs');
 var docRoute = require('./app/routes/doc.server.route.js');
 // create application/x-www-form-urlencoded parser 
 app.use('/', docRoute);
-app.use(express.static('dist'));  
+app.use(express.static('static'));  
 app.set('view engine', 'ejs');
 app.engine('.ejs', ejs.__express);  
 var server=app.listen(8080,function(){

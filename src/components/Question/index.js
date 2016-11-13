@@ -28,10 +28,10 @@ class RootQuestion extends Component {
         </div>   
         <div className="input-group inputdetails form-group">
           每项得分(1,2,3,4)：
-          <span>A:</span><input type="" name="" id="detail.a"  onChange={changeQus} value={ques.detail.a}/>
-          B:<input type="" name="" id="detail.b" onChange={changeQus} value={ques.detail.b}/>
-          C:<input type="" name="" id="detail.c" onChange={changeQus}  value={ques.detail.c}/>
-          D:<input type="" name="" id="detail.d" onChange={changeQus}  value={ques.detail.d}/>
+          <span>A:</span><input type="" name="" id="detail.A"  onChange={changeQus} value={ques.detail.A}/>
+          B:<input type="" name="" id="detail.B" onChange={changeQus} value={ques.detail.B}/>
+          C:<input type="" name="" id="detail.C" onChange={changeQus}  value={ques.detail.C}/>
+          D:<input type="" name="" id="detail.D" onChange={changeQus}  value={ques.detail.D}/>
         </div> 
       </div>  
     )	

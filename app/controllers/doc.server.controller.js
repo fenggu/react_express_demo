@@ -103,6 +103,7 @@ function Createmain(req, res,next) {
   }
 function CreateSencond(req, res,next) { 
     var data={};
+    console.log(req.body)
     var  second=new Second({    
       pid:req.body.pid,
       title:req.body.title,
@@ -178,6 +179,7 @@ module.exports={
               if(err){
                 res.send(err)
               }else{ 
+                console.log(data)
                  res.render('index', { data:data,usernum:result.length}) 
               }
             })
@@ -209,7 +211,9 @@ module.exports={
         console.log("Error:" + err);
        }else{  
             data=result
+            console.log(result)
        }
+       console.log(data)
       res.send({data:data}) 
      })
   },
