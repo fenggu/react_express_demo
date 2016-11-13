@@ -67,7 +67,25 @@ function mapDispatchToProps(dispatch) {
     getTest:(e)=>{
         var Ev=e.target; 
         var pid=Ev.getAttribute("id")
-        dispatch(gettestAction(pid))
+        fetch('gettest', {  
+            method: 'post',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                  pid:pid
+            })
+         }).then(function(response) { 
+            return response.json();
+        }).then(function(json){   
+         dispatch(gettestAction(json))
+
+        }).catch(function(err) {
+            // 捕获错误
+            console.log(err)
+        }); 
+
     },
   handleClick:(e)=>{
     window.location.href="admin.html"

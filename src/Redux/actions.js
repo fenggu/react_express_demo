@@ -27,8 +27,8 @@ export function getlistAction(list) {
 export function addtestAction() {
   return { type: addtest }
 }
-export function gettestAction(pid) {
-  return { type: gettest ,pid}
+export function gettestAction(data) {
+  return { type: gettest ,data}
 }
 export function cgTitle(text){
 	return {type : changett,text}

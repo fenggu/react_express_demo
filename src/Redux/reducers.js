@@ -97,31 +97,14 @@ function counter(state, action) {
   return state
   case gettest:
   var nextstate=Object.assign({}, state)  
-  var _test=Object.assign({}, state.test)  
-      fetch('gettest', {  
-          method: 'post',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-                pid:action.pid
-          })
-       }).then(function(response) { 
-          return response.json();
-      }).then(function(json){  
-        _test.question=json.data.question;
-        _test.ansdeqj=json.data.ansdeqj;
-        _test.ansdetext=json.data.ansdetext;
-        _test.title=json.data.title;
-        _test.pid=json.data.pid 
-      }).catch(function(err) {
-          // 捕获错误
-          console.log(err)
-      }); 
-      nextstate.test=_test
-      console.log(nextstate)
-      return nextstate
+  var _test=Object.assign({}, state.test) 
+        _test.question=action.data.data.question;
+        _test.ansdeqj=action.data.data.ansdeqj;
+        _test.ansdetext=action.data.data.ansdetext;
+        _test.title=action.data.data.title;
+        _test.pid=action.data.data.pid 
+        nextstate.test=_test    
+      return nextstate 
   case changeqj:
     var nextstate=Object.assign({},state)
     var _state=Object.assign({},state.test)
