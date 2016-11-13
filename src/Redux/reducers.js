@@ -66,6 +66,10 @@ function counter(state, action) {
   return  nextstate
   case addtest: //添加数据方法 以及编辑方法
   var test = Object.assign({}, state.test)  
+      if(test.title=""||test.pid==""){
+        alert("标题或者编号不得为空！")
+        return state
+      }
       fetch('addtest', {  
         method: 'post',
         headers: {

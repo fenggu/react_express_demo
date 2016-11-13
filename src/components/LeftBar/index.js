@@ -30,7 +30,7 @@ class RootLeftBar extends Component {
                  {main.title} 
           </div>
         )}
-			 <div className="leftchild lefttitle">
+			 <div className="leftchild lefttitle btn btn-info">
 			 	新增问卷
 			 </div>
 		</div>
