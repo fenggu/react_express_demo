@@ -15,23 +15,23 @@ class RootQuestion extends Component {
     const {ques}=this.props 
     const {num}=this.props  
     return ( 
-      <div className="input-group qustion" id={num}>
+      <div className="input-group qustion  form-group" id={num}>
         <div> 
          第<span className="num">{num}</span>题： 
          <input className="qustitle" type="text" placeholder="请输入测试名称" id="content"  onChange={changeQus}  value={ques.content} name=""/><br/>   
         </div>
-        <div className="qusansDiv">
-          A:<input type="text" id="answer.A"  className="qusans" onChange={changeQus} value={ques.answer.A} name=""/>  <br/>
-          B:<input type="text"  id="answer.B" className="qusans" onChange={changeQus} value={ques.answer.B} name=""/> <br/>
-          C:<input type="text"  id="answer.C"   className="qusans" onChange={changeQus} value={ques.answer.C}  name=""/> <br/>
-          D:<input type="text"    id="answer.D" className="qusans" onChange={changeQus} value={ques.answer.D} name=""/> 
+        <div className="qusansDiv form-group">
+          A:<input type="text" id="answer.A"  className="qusans  form-control" onChange={changeQus} value={ques.answer.A} name=""/>  <br/>
+          B:<input type="text"  id="answer.B" className="qusans  form-control" onChange={changeQus} value={ques.answer.B} name=""/> <br/>
+          C:<input type="text"  id="answer.C"   className="qusans  form-control" onChange={changeQus} value={ques.answer.C}  name=""/> <br/>
+          D:<input type="text"    id="answer.D" className="qusans  form-control" onChange={changeQus} value={ques.answer.D} name=""/> 
         </div>   
-        <div className="input-group inputdetails">
+        <div className="input-group inputdetails form-group">
           每项得分(1,2,3,4)：
-          A:<input type="" name="" id="detail.a" onChange={changeQus} value={ques.detail.a}/>
+          <span>A:</span><input type="" name="" id="detail.a"  onChange={changeQus} value={ques.detail.a}/>
           B:<input type="" name="" id="detail.b" onChange={changeQus} value={ques.detail.b}/>
-          C:<input type="" name="" id="detail.c" onChange={changeQus} value={ques.detail.c}/>
-          D:<input type="" name="" id="detail.d" onChange={changeQus} value={ques.detail.d}/>
+          C:<input type="" name="" id="detail.c" onChange={changeQus}  value={ques.detail.c}/>
+          D:<input type="" name="" id="detail.d" onChange={changeQus}  value={ques.detail.d}/>
         </div> 
       </div>  
     )	

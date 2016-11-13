@@ -9,10 +9,10 @@ class RootAnsDeail extends Component {
   render() {
     const{handleTextChange,handleQjchange}=this.props
     return ( 
-      <div className="ansdetail" data-num={this.props.num}>
-          <input type="text" type="number" value={this.props.ansdeqj1} data-num="0" onChange={handleQjchange}/>至 <input type="text" data-num
-          ="1"  type="number"  onChange={handleQjchange} value={this.props.ansdeqj2}/> <br/>
-          <textarea defaultValue={this.props.ansdetext} value={this.props.ansdetext} onChange={handleTextChange}></textarea>
+      <div className="ansdetail form-group" data-num={this.props.num}>
+          <input type="text" type="number" value={this.props.ansdeqj1} data-num="0" className="form-control"  style={{"display":"inline-block"}}  onChange={handleQjchange}/>至 <input type="text" data-num
+          ="1"  type="number"  onChange={handleQjchange} value={this.props.ansdeqj2} style={{"display":"inline-block"}} className="form-control" /> <br/>
+          <textarea defaultValue={this.props.ansdetext} value={this.props.ansdetext}  className="form-control"  onChange={handleTextChange}></textarea>
       </div>
     )	
   }

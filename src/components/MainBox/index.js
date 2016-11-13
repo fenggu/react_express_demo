@@ -19,10 +19,10 @@ class RootMainBox extends Component {
     return (
 		<div className="MainBox"> 
 
-    <div className="input-group">
+    <div className="input-group  form-group">
        问卷名称：
-      <input  id="testtitle" type="text" onChange={handleChangeTitle} value={this.props.state.test.title} placeholder="请输入测试名称" name=""/> <br/>
-      编号：<input type="text" maxLength="2" id="pid" onChange={handleChangePid} value={this.props.state.test.pid} />
+      <input  id="testtitle" type="text" className='form-control' onChange={handleChangeTitle} value={this.props.state.test.title} placeholder="请输入测试名称" name=""/> <br/>
+      编号：<input type="text" maxLength="2" id="pid" className='form-control'  onChange={handleChangePid} value={this.props.state.test.pid} />
     </div>
       <div className="list">  
         {this.props.state.test.question.map((question, index) =>
@@ -33,7 +33,7 @@ class RootMainBox extends Component {
                 />
         )}
         </div> 
-     <div id="next" onClick={onIncreaseClick}>下一题</div>
+     <div id="next" onClick={onIncreaseClick}  className="btn btn-info" style={{"marginBottom":"1rem"}}>下一题</div>
      测试结果
      <div id="anslist">
         <div className="detail" id="ansde"> 
@@ -50,8 +50,8 @@ class RootMainBox extends Component {
       
      </div>
   
-     <div id="nextans" onClick={onInansClick}>增加结果</div> 
-    <div className="ty_btn"><span onClick={onAddTestClick}>提交</span></div>
+     <div id="nextans" onClick={onInansClick} className="btn btn-info">增加结果</div> 
+    <div className="ty_btn"><span onClick={onAddTestClick}  className="btn btn-success">提交</span></div>
 		</div>
     )	
   }
