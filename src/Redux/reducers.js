@@ -109,8 +109,7 @@ function counter(state, action) {
           })
        }).then(function(response) { 
           return response.json();
-      }).then(function(json){ 
-
+      }).then(function(json){  
         _test.question=json.data.question;
         _test.ansdeqj=json.data.ansdeqj;
         _test.ansdetext=json.data.ansdetext;

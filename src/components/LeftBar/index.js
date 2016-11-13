@@ -18,7 +18,7 @@ class RootLeftBar extends Component {
     getList();
   } 
   render() {
-    const{getTest}=this.props
+    const{getTest,handleClick}=this.props
     return (
 		<div className="LeftBar">
 			 <div className="leftchild lefttitle">
@@ -30,8 +30,9 @@ class RootLeftBar extends Component {
                  {main.title} 
           </div>
         )}
-			 <div className="leftchild lefttitle btn btn-info">
-			 	新增问卷
+			 <div className="leftchild lefttitle btn btn-info" onClick={handleClick}>
+
+        新增问卷 
 			 </div>
 		</div>
     )	
@@ -67,7 +68,10 @@ function mapDispatchToProps(dispatch) {
         var Ev=e.target; 
         var pid=Ev.getAttribute("id")
         dispatch(gettestAction(pid))
-    }
+    },
+  handleClick:(e)=>{
+    window.location.href="admin.html"
+  }
   }
 }
 
