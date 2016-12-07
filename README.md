@@ -4,6 +4,7 @@
 	  "plugins": ["transform-runtime",["import", [{ "libraryName": "antd", "style": "css" }]]]
 	}
 
+ ./mongod --dbpath "../data"
 2. npm run dev 进行调试
 	:8010 后台管理
 3. npm run build 生成静态文件
@@ -17,4 +18,3 @@
 	src：react 生产环境代码
 	static:正式产出代码
 	views:用户答题页面ejs模板
-

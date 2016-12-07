@@ -107,6 +107,7 @@
 			var star=$("#star").clone() 
 			datas=JSON.parse('<%- JSON.stringify(data)%>');
 			var usernum=JSON.parse('<%- JSON.stringify(usernum)%>');
+			console.log(datas)
 			$("#usernum").html(usernum)
 			$("#title").html(datas.title)
 			title=datas.title;

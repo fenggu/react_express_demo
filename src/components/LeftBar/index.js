@@ -3,8 +3,7 @@ import {Link} from 'react-router';
 import './index.css';
 import {  connect } from 'react-redux';
 import { getlistAction } from '../../Redux/actions.js'; 
-import { gettestAction } from '../../Redux/actions.js'; 
-
+import { gettestAction } from '../../Redux/actions.js';  
 class RootLeftBar extends Component {  
 
   // maptitle=(arr)=>{   	
